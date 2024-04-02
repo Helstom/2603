@@ -1,15 +1,22 @@
 package ZamestnaneckySystem;
 
+import java.util.Scanner;
+
 public class Manager extends Zamestnanec {
     private int pocetzamestnancu;
-    public Manager(String firstname, String lastname, String position, int plat, int pocetzamestnancu) {
-        super(firstname, lastname, position, plat);
-        this.pocetzamestnancu = pocetzamestnancu;
+    public Manager() {
+        super();
+        Scanner myObj = new Scanner(System.in);
+        System.out.println("pocet zamestnancu");
+        this.pocetzamestnancu = myObj.nextInt();
+        myObj.nextLine();
     }
 
     @Override
-    void vypisInfo() {
+    public void vypisInfo() {
         super.vypisInfo();
+        System.out.println("pocet zamestnancu");
         System.out.println(pocetzamestnancu);
+
     }
 }
